@@ -14,8 +14,11 @@ import org.opencv.ml.SVM;
  * training java
  * https://stackoverflow.com/questions/31454644/java-opencv-svm-training-error
  * 
- * https://docs.opencv.org/2.4/doc/user_guide/ug_traincascade.html
  *
+ * 
+ * tools for training - não é necessário codificar....
+ * https://docs.opencv.org/2.4/doc/user_guide/ug_traincascade.html
+ * https://www.cs.auckland.ac.nz/~m.rezaei/Tutorials/Creating_a_Cascade_of_Haar-Like_Classifiers_Step_by_Step.pdf
  * 
  * @author mertins
  */
