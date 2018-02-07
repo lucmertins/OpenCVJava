@@ -6,7 +6,24 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- *
+Referência
+https://www.youtube.com/watch?v=WEzm7L5zoZE
+http://cogcomp.org/Data/Car/
+
+* Executar codigo java que produz bg.txt e cars.info
+https://github.com/lucmertins/OpenCVJava
+
+Gerar vector
+opencv_createsamples -info cars.info -num 550 -w 48 -h 24 -vec cars.vec
+
+Visualizar
+opencv_createsamples -vec cars.vec -w 48 -h 24
+
+
+opencv_traincascade -data data -vec cars.vec -bg bg.txt -numPos 500 -numNeg 500 -numStages 50 -w 48 -h 24 -featureType LBP
+ou
+opencv_traincascade -data data -vec cars.vec -bg bg.txt -numPos 500 -numNeg 500 -numStages 50 -w 48 -h 24 -featureType HAAR
+
  * @author mertins
  */
 public class DescribeImages {
