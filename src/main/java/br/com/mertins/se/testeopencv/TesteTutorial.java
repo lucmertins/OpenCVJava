@@ -24,8 +24,8 @@ class DetectFaceDemo {
         System.out.println("\nRunning DetectFaceDemo");
         // Create a face detector from the cascade file in the resources
         // directory.
-        CascadeClassifier faceDetector = new CascadeClassifier(getClass().getResource("/lbpcascade_frontalface.xml").getPath());
-        Mat image = Imgcodecs.imread(getClass().getResource("/lena.png").getPath());
+        CascadeClassifier faceDetector = new CascadeClassifier(getClass().getResource("/car_cascade.xml").getPath());
+        Mat image = Imgcodecs.imread(getClass().getResource("/test-12.pgm").getPath());
         // Detect faces in the image.
         // MatOfRect is a special container class for Rect.
         MatOfRect faceDetections = new MatOfRect();
@@ -36,7 +36,7 @@ class DetectFaceDemo {
             Imgproc.rectangle(image, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(255, 255, 0));
         }
         // Save the visualized detection.
-        String filename = "faceDetection.png";
+        String filename = "carDetection.png";
         System.out.println(String.format("Writing %s", filename));
         Imgcodecs.imwrite(filename, image);
     }
